@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <!-- head -->
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <title>Students</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <style>
+      #title{
+          background-color:#067354;
+          color:white;
+      }
+      #title2{
+          background-color:#067354  ;
+          color:white;
+      }
+      #editStudentTitle{
+          background-color:#ffa500 ;
+          color:white;
+      }
+      .btn-file {
+          position: relative;
+          overflow: hidden;
+      }
+      .btn-file input[type=file] {
+          position: absolute;
+          top: 0;
+          right: 0;
+          min-width: 10%;
+          min-height: 100%;
+          font-size: 100px;
+          text-align: right;
+          filter: alpha(opacity=0);
+          opacity: 0;
+          outline: none;
+          background: white;
+          cursor: inherit;
+          display: block;
+      }
+
+      #img-upload{
+          width: 10%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- navigation bar -->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">HEGATI</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="groups.html">Groups</a></li>
+          </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li ><a  id="userName" > notConnected</a></li>
+              <li id="signupButton"><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li id="loginButton"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              <li id="logoutButton"><a href="login.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>            
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- title -->
+    <div class="container-fluid">
+      <!-- jumbotron enlarges fonts and puts everything in a gray box with rounded corners. If jumbotron is outside a container it fills the total width. You can change the styles by placing the changes after thedd Bootstrap CDN link -->
+      <div class="jumbotron" id="title">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+              <h1 id="titleText">title</h1>
+              <p  id="note">note</p>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
+              <img  src="group.png" class="img-rounded" alt="Cinque Terre" align="right" >
+            <a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  	<!-- table -->
+  	<div class="container-fluid">
+          <div class="panel panel-default" >
+              <div id="title2" class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Reports table</h3>
+              </div>
+              <div class="panel-body">
+
+          	    <div class="row clearfix">
+          	    <div class="col-md-12 column">
+          	      <table class="table table-bordered table-hover" id="tab_logic">
+          	        <thead>
+          	          <tr >
+          	            <th class="text-center">
+          	              #
+          	            </th>
+                        <th class="text-center">
+                          Id
+                        </th>
+          	            <th class="text-center">
+          	              Name
+          	            </th>
+          	            <th class="text-center">
+          	              Phone
+          	            </th>
+          	           	<th class="text-center">
+          	           		email
+          	            </th>
+                        <th class="text-center">
+                          Present
+                        </th>
+                        <th class="text-center">
+                          Late
+                        </th>
+                        <th class="text-center">
+                          Missing
+                        </th>
+                         <th class="text-center">
+                          Options
+                        </th>
+          	          </tr>
+          	        </thead>
+          	        <tbody>
+          	            <tr id='addr1' class="text-center">
+          	            </tr>
+          	        </tbody>
+          	      </table>
+          	    </div>
+          	  </div>
+              </div>
+         </div>
+  	</div>
+
+
+    <!-- add new student -->
+    <div hidden id="editStudent" class="container-fluid">
+          <div class="panel panel-default">
+                <div id="editStudentTitle" class="panel-heading">
+                  <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Edit Student</h3>
+            </div>
+            <div class="panel-body">
+                  <div class="span12">
+                      <div class="span6">
+                         <form id="editStudentForm" class="form-horizontal" >
+                                    <!--username -->
+                                    <div class="control-group">
+                                        <label class="control-label" >Student Id:</label>
+                                        <div class="controls">
+                                          <input required="" class="form-control" id="" type="text"  placeholder="E.g. 123456789">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" >Phone:</label>
+                                        <div class="controls">
+                                          <input required="" class="form-control" id="" type="text"  placeholder="E.g. 050-12345678">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" >Name:</label>
+                                        <div class="controls">
+                                          <input required="" class="form-control" id="" type="text"  placeholder="E.g. bar">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" >Email:</label>
+                                        <div class="controls">
+                                          <input required="" class="form-control" id="" type="text"  placeholder="E.g. email@email.com">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <button class="btn-lg btn-warning" type="submit">Add New Student</button>
+                                            <button class="btn-lg btn-danger" id="cancelEditStudent">Cancel</button>
+
+                                        </div>
+                                    </div>
+
+                              </form>
+                      </div>
+                    </div>
+                </div>
+           
+         </div>
+    </div>
+
+    <!-- add new group -->
+    <div class="container-fluid">
+          <div class="panel panel-default">
+                <div id="title" class="panel-heading">
+                  <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Add New Group</h3>
+            </div>
+            <div class="panel-body">
+                  <div class="span12">
+                      <div class="span6">
+                         <form id="addStudentForm" class="form-horizontal" >
+                                    <!--username -->
+                                    <div class="control-group">
+                                        <label class="control-label" >Student Id:</label>
+                                        <div class="controls">
+                                          <input required="" class="form-control" id="student_id_input" type="text"  placeholder="E.g. 123456789">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" >Phone:</label>
+                                        <div class="controls">
+                                          <input required="" class="form-control" id="student_phone_input" type="text"  placeholder="E.g. 050-12345678">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" >Name:</label>
+                                        <div class="controls">
+                                          <input required="" class="form-control" id="student_name_input" type="text"  placeholder="E.g. bar">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" >Email:</label>
+                                        <div class="controls">
+                                          <input required="" class="form-control" id="student_email_input" type="text"  placeholder="E.g. email@email.com">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <button class="btn-lg btn-success" type="submit">Add New Student</button>
+
+                                        </div>
+                                    </div>
+
+                              </form>
+                      </div>
+                    </div>
+                </div>
+           
+         </div>
+    </div>
+
+<!-- cpop up change image-->
+    <div class="container">
+    <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        <h4 class="modal-title" id="myModalLabel">Change image</h4>
+                        </div>
+                    <div class="modal-body">
+                        <center>
+                        <img src="group.png" id="newImage" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                        <div class="input-group">
+                          <center>
+                         <div class="row">    
+                          
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label>Upload Image</label>
+                                  <div class="input-group">
+                                      <span class="input-group-btn">
+                                          <span class="btn btn-default btn-file">
+                                              Browse… <input type="file" id="imgInp">
+                                          </span>
+                                      </span>
+                                      <input type="text" class="form-control" readonly>
+                                  </div>
+                                  <img id='img-upload'/>
+                              </div>
+                          </div>
+                         
+                        </div>
+                         </center>
+                    </div>
+                    <div class="modal-footer">
+                        <center>
+                          <button id="changeImage" type="button" class="btn btn-default" data-dismiss="modal">Change image</button>
+                          <button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+
+
+
+
+
+
+
+
+ 	  <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/rest.js"></script>
+    <script src="js/students.js"></script>
+
+  </body>
+</html>

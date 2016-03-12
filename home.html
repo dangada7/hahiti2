@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<!-- head -->
+	<head>
+		<meta charset="UTF-8">
+
+		<!-- If IE use the latest rendering engine -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- Set the page to the width of the device and set the zoon level -->
+		<meta name="viewport" content="width = device-width, initial-scale = 1">
+		<title>Hegati</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	    <style>
+	    .jumbotron{
+	        background-color:#067354;
+	        color:white;
+	    }
+	    #title2{
+       		background-color:#067354  ;
+         	color:white;
+	    }
+	    #title3{
+	        background-color:#067354 ;
+	        color:white;
+	    }
+	    </style>
+
+	     <!-- Morris Charts CSS -->
+   		 <link href="css/morris.css" rel="stylesheet">
+
+	</haed>
+
+
+	<!-- body -->
+	<body>
+	    <!-- navigation bar -->
+	    <nav class="navbar navbar-inverse">
+	      <div class="container-fluid">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>                        
+	          </button>
+	          <a class="navbar-brand" href="#">HEGATI</a>
+	        </div>
+	        <div class="collapse navbar-collapse" id="myNavbar">
+	          <ul class="nav navbar-nav">
+	            <li class="active"><a href="home.html">Home</a></li>
+	            <li><a href="reports.html">Reports</a></li>
+	            <li><a href="Groups.html">Groups</a></li>
+	          </ul>
+	          <ul class="nav navbar-nav navbar-right">
+	          	<li ><a  id="userName" > notConnected</a></li>
+	            <li id="signupButton"><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+	            <li id="loginButton"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	            <li id="logoutButton"><a href="login.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>            
+	          </ul>
+	        </div>
+	      </div>
+	    </nav>
+
+		<!-- title -->
+		<div class="container-fluid">
+
+			<!-- jumbotron enlarges fonts and puts everything in a gray box with rounded corners. If jumbotron is outside a container it fills the total width. You can change the styles by placing the changes after thedd Bootstrap CDN link -->
+			<div class="jumbotron">
+				<h1 id="title">Welcome to Hahiti</h1>
+			</div>
+		</div>
+
+		<!-- body -->
+	    <div class="container-fluid">
+
+
+	                <!-- /.row -->
+	                <div class="row">
+	                    <div class="col-lg-12">
+	                        <div class="panel panel-default">
+	                            <div id="title2" class="panel-heading">
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Activity Chart</h3>
+	                            </div>
+	                            <div class="panel-body">
+	                                <div id="morris-area-chart"></div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- /.row -->
+
+	                <div class="row">
+	                    <div class="col-lg-4">
+	                        <div class="panel panel-default">
+	                            <div id="title3" class="panel-heading">
+	                                <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i> Number Of Studnt In Groups</h3>
+	                            </div>
+	                            <div class="panel-body">
+	                                <div id="morris-donut-chart"></div>
+	                                <div class="text-right">
+	                                    <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-lg-4">
+	                        <div class="panel panel-default">
+	                            <div id="title3" class="panel-heading">
+	                                <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Recent Activity </h3>
+	                            </div>
+	                            <div class="panel-body">
+	                                <div class="list-group">
+	                                    <a href="#" class="list-group-item">
+	                                        <span class="badge">just now</span>
+	                                        <i class="fa fa-fw fa-calendar"></i> Create Group - Math 
+	                                    </a>
+	                                    <a href="#" class="list-group-item">
+	                                        <span class="badge">4 minutes ago</span>
+	                                        <i class="fa fa-fw fa-comment"></i> Upload Report - tennis group. 
+	                                    </a>
+	                                    <a href="#" class="list-group-item">
+	                                        <span class="badge">23 minutes ago</span>
+	                                        <i class="fa fa-fw fa-truck"></i> Add student - Victor Banshats to Group Chess-masters
+	                                    </a>
+	                                    <a href="#" class="list-group-item">
+	                                        <span class="badge">46 minutes ago</span>
+	                                        <i class="fa fa-fw fa-money"></i> Add student - Moses The Messiah to Group Exodus from Egypt
+	                                    </a>
+	                                    <a href="#" class="list-group-item">
+	                                        <span class="badge">1 hour ago</span>
+	                                        <i class="fa fa-fw fa-user"></i> Create Group - Bootstrap best farm-work
+	                                    </a>
+	                                    <a href="#" class="list-group-item">
+	                                        <span class="badge">2 hours ago</span>
+	                                        <i class="fa fa-fw fa-check"></i> Delete student - dan gadasi from Group software engineering
+	                                    </a>
+	                                    <a href="#" class="list-group-item">
+	                                        <span class="badge">yesterday</span>
+	                                        <i class="fa fa-fw fa-globe"></i> Upload Report - Math group. 
+	                                    </a>
+	                                    <a href="#" class="list-group-item">
+	                                        <span class="badge">two days ago</span>
+	                                        <i class="fa fa-fw fa-check"></i> Upload Report - Math group.
+	                                    </a>
+	                                </div>
+	                                <div class="text-right">
+	                                    <a href="#">View All Activity <i class="fa fa-arrow-circle-right"></i></a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-lg-4">
+	                        <div class="panel panel-default">
+	                            <div id="title3" class="panel-heading">
+	                                <h3 class="panel-title"><i class="fa fa-money fa-fw"></i>Notification</h3>
+	                            </div>
+	                            <div class="panel-body">
+	                                <div class="table-responsive">
+	                                    <table class="table table-bordered table-hover table-striped">
+	                                        <thead>
+	                                            <tr>
+	                                                <th>#</th>
+	                                                <th>data</th>
+	                                                <th>Info</th>
+	                                            </tr>
+	                                        </thead>
+	                                        <tbody>
+	                                            <tr>
+	                                                <td>1</td>
+	                                                <td>5/21/2016 10:05</td>
+	                                                <td>Yussi was late 20 times - Group Math</td>
+	                                            </tr>
+	                                            <tr>
+	                                                <td>2</td>
+	                                                <td>12/21/2016 10:05</td>
+	                                                <td>Bar was late 5 times - Group JavaScript</td>
+	                                            </tr>
+	                                            <tr>
+	                                                <td>3</td>
+	                                                <td>10/21/2016 13:05</td>
+	                                                <td>Statistics Group - Tennis </td>
+	                                            </tr>
+	                                            <tr>
+	                                                <td>4</td>
+	                                                <td>1/21/2016 24:05</td>
+	                                                <td>Statistics Group - Just do it</td>
+	                                            </tr>
+	                                            <tr>
+	                                                <td>5</td>
+	                                                <td>10/21/2016 6:15</td>
+	                                                <td>Eitan was missing 5 times - Group Just do it</td>
+	                                            </tr>
+	                                               <tr>
+	                                                <td>6</td>
+	                                                <td>10/21/2016 6:15</td>
+	                                                <td>Eitan was missing 5 times - Group Just do it</td>
+	                                            </tr>
+	                                        </tbody>
+	                                    </table>
+	                                </div>
+	                                <div class="text-right">
+	                                    <a href="#">View All Transactions <i class="fa fa-arrow-circle-right"></i></a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!-- /.row -->
+	    </div>
+	    <!-- /.container-fluid -->
+		<br>
+		<br>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="js/rest.js"></script>
+    	<script src="js/home.js"></script>
+
+    	 <!-- Morris Charts JavaScript -->
+	    <script src="js/morris/raphael.min.js"></script>
+	    <script src="js/morris/morris.min.js"></script>
+	    <script src="js/morris/morris-data.js"></script>
+	</body>
+</html>

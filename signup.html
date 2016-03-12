@@ -1,0 +1,121 @@
+		<!DOCTYPE html>
+<html lang="en">
+
+	<!-- head -->
+	<head>
+		<meta charset="UTF-8">
+
+		<!-- If IE use the latest rendering engine -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- Set the page to the width of the device and set the zoon level -->
+		<meta name="viewport" content="width = device-width, initial-scale = 1">
+		<title>Hegati</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+		<style>
+		#title{
+		    background-color:#067354;
+		    color:white;
+		}
+		</style>
+
+	</haed>
+
+	<!-- body -->
+	<body>
+	    <!-- navigation bar -->
+	    <nav class="navbar navbar-inverse">
+	      <div class="container-fluid">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>                        
+	          </button>
+	          <a class="navbar-brand" href="#">HEGATI</a>
+	        </div>
+	        <div class="collapse navbar-collapse" id="myNavbar">
+	          <ul class="nav navbar-nav">
+	            <li class="active"><a href="home.html">Home</a></li>
+	            <li><a href="reports.html">Reports</a></li>
+	            <li><a href="Groups.html">Groups</a></li>
+	          </ul>
+	          <ul class="nav navbar-nav navbar-right">
+	          	<li ><a  id="userName" > notConnected</a></li>
+	            <li id="signupButton"><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+	            <li id="loginButton"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	            <li id="logoutButton"><a href="login.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>            
+	          </ul>
+	        </div>
+	      </div>
+	    </nav>
+
+		<!-- signup-->
+	    <div class="container">
+	    	<div class="panel panel-default">
+			      	<div id="title" class="panel-heading">
+				        <h3>Sign Up </h3>
+					</div>
+					<div class="panel-body">
+				        <div class="span12">
+				            <div class="span6">
+				               <form id="signup_form" class="form-horizontal" >
+					                <!--name -->
+					                <div class="control-group">
+						                <label class="control-label" for="inputName"><h4>Name:</h4></label>
+						                <div class="controls">
+						                   <input required="" class="form-control" id="inputName" type="text" name="Name" placeholder="E.g. Ashwin">
+						                </div>
+						            </div>
+
+						            <!--email -->
+					                <div class="control-group">
+						                <label class="control-label" for="inputEmail"><h4>Email:</h4></label>
+						                <div class="controls">
+						                   <input required="" class="form-control" id="inputEmail" type="text" name="email" placeholder="E.g. ashwinh@cybage.com">
+						                </div>
+						            </div>
+
+
+						            <!--username -->
+					                <div class="control-group">
+						                <label class="control-label" for="inputUser"><h4>Username:</h4></label>
+						                <div class="controls">
+						                  <input required="" class="form-control" id="inputUser" type="text" name="Username" placeholder="E.g. ashwinhegde">
+						                </div>
+						            </div>
+
+						            <!--password -->
+					                <div class="control-group">
+						                <label class="control-label"><h4>Password:</h4></label>
+						                <div class="controls">
+						                   <input required="" class="form-control" id="inputPassword" type="password"  placeholder="Min. 8 Characters">
+						                </div>
+						            </div><br>
+
+			                        <div class="control-group">
+			                            <div class="controls">  
+			                                <input required type="checkbox">I agree all your <a href="#">Terms of Services</a>
+			                                <br>
+			                                <button class="btn-lg btn-success" type="submit">Sign Up</button>
+			                                <button class="btn-lg btn-warning" type="button">Help</button>
+			                            </div>
+			                        </div>
+
+			                    	</form>
+			            	</div>
+			            </div>
+			        </div>
+			   
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="js/rest.js"></script>
+    	<script src="js/signup.js"></script>
+
+	</body>
+</html>
